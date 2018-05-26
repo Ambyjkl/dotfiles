@@ -1,19 +1,3 @@
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-# Source zim
-# source $HOME/.zim/init.zsh
-# Lines configured by zsh-newuser-install
-
-HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=100000
-setopt autocd nomatch notify extendedglob
-
 bindkey -e
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
@@ -47,7 +31,7 @@ bindkey "^[[1;3D" altleft
 #fi
 
 # Customize to your needs...
-files=($HOME/Documents/test/text/*)
+#files=($HOME/Documents/test/text/*)
 
 # alias a='aria2c'
 alias nig='sudo npm i -g'
@@ -83,18 +67,18 @@ export EDITOR="$VISUAL"
 export SVN_EDITOR=vim
 export $(dbus-launch)
 export LESS=-asrRix8
-
-export AURDEST="$TMPDIR/pacaur"
+export PATH="$PATH:$HOME/.bin"
+export AURDEST="/tmp/pacaur"
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
-cat "${files[RANDOM % ${#files[@]}]}"
+#cat "${files[RANDOM % ${#files[@]}]}"
 #export CC=/usr/bin/gcc-5
 #export CXX=/usr/bin/g++-5
 export MOZ_USE_OMTC=1
 setopt PROMPT_SUBST
+fpath=(~/.zsh $fpath)
 source <(antibody init)
-source ~/zshgg/*.zsh
 antibody bundle < ~/.zsh_plugins.txt
 EMOJI_CLI_KEYBIND='^q'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
@@ -106,8 +90,18 @@ alias ppp='pp -S --dbonly'
 alias rgtk="GDK_DPI_SCALE= GDK_SCALE="
 alias c="code ."
 alias nuxt='node $(npm bin)/nuxt'
-
+alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
 alias memgg='sudo swapoff -a && ~/memory'
 alias zathura='GDK_SCALE=1 GDK_DPI_SCALE=1 zathura'
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $NR_USERNAME)/bus"
+alias ma='mpv --no-video'
+alias k=killall
 
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $NR_USERNAME)/bus"
+export MAKEFLAGS="-j$(nproc)"
+fortune | cowsay | ponysay
+PURE_PROMPT_SYMBOL=λ
+PURE_GIT_UNTRACKED_DIRTY=0
+zstyle ':completion:*:*:git:*' script /usr/share/git/completion/git-completion.zsh
+
+# OPAM configuration
+. /home/amby/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

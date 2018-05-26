@@ -1,4 +1,4 @@
-djui/alias-tips
+#djui/alias-tips
 caarlos0/zsh-mkc
 caarlos0/zsh-open-github-pr
 
@@ -14,13 +14,14 @@ zimfw/zimfw folder:modules/archive/functions kind:path
 zimfw/zimfw folder:modules/fasd
 zimfw/zimfw folder:modules/directory
 zimfw/zimfw folder:modules/git
-zimfw/zimfw folder:modules/git/functions kind:path
+#zimfw/zimfw folder:modules/git/functions kind:path
 #zimfw/zimfw folder:modules/git-info
 zimfw/zimfw folder:modules/history
 zimfw/zimfw folder:modules/input
 zimfw/zimfw folder:modules/utility
 zimfw/zimfw folder:modules/meta
 zimfw/zimfw folder:modules/completion
+zimfw/zimfw folder:modules/prompt kind:path
 
 zdharma/history-search-multi-word
 zdharma/fast-syntax-highlighting
@@ -30,8 +31,10 @@ peterhurford/git-it-on.zsh
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
-supercrabtree/k
+#supercrabtree/k
 
 # themes
-#hoffi/zsh-theme-lambda
-denysdovhan/spaceship-prompt
+#hoffi/wezmzsh-theme-lambda
+#denysdovhan/spaceship-prompt
+mafredri/zsh-async
+sindresorhus/pure
