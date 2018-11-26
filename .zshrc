@@ -101,7 +101,32 @@ export MAKEFLAGS="-j$(nproc)"
 fortune | cowsay | ponysay
 PURE_PROMPT_SYMBOL=λ
 PURE_GIT_UNTRACKED_DIRTY=0
-zstyle ':completion:*:*:git:*' script /usr/share/git/completion/git-completion.zsh
 
 # OPAM configuration
 . /home/amby/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+alias grpo='git remote prune origin'
+alias ggone="git branch -vv | grep ': gone]'|  grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d"
+# cd to the path of the front Finder window
+cdf() {
+	target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+	if [ "$target" != "" ]; then
+		cd "$target"; pwd
+	else
+		echo 'No Finder window found' >&2
+	fi
+}
+
+gpu() {
+  B=$(git branch | grep \* | cut -d ' ' -f2)
+  echo "git push -u $1 $B"
+  git push -u $1 $B
+}
+alias gpo="gpu origin"
+switch() {
+  if [ -s ~/.npmrc ]; then
+    mv ~/.npmrc ~/.npmrc.old
+  else
+    mv ~/.npmrc.old ~/.npmrc
+  fi
+}
