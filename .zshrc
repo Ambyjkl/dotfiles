@@ -38,7 +38,7 @@ alias nig='sudo npm i -g'
 alias lll='ls -la | sort -k5hr'
 alias cast='castnow --address 192.168.2.23'
 alias reflect='sudo reflector --latest 30 --number 20 --sort rate --save /etc/pacman.d/mirrorlist'
-alias pup='sudo pacman -Sy && sudo powerpill -Su --noconfirm && pacaur -Su --noedit --noconfirm'
+alias pup='sudo pacman -Sy && sudo powerpill -Su --noconfirm && pikaur -Su --noedit --noconfirm'
 alias fluidgm='fluidsynth -a pulseaudio -m alsa_seq -l -i /usr/share/soundfonts/gm.sf2'
 alias fluidg='fluidsynth -a pulseaudio -m alsa_seq -l -i /usr/share/soundfonts/gbfont.sf2'
 alias fluidsgm='fluidsynth -a pulseaudio -m alsa_seq -l -i /usr/share/soundfonts/SGM-V2.01.sf2'
@@ -67,7 +67,7 @@ export EDITOR="$VISUAL"
 export SVN_EDITOR=vim
 export $(dbus-launch)
 export LESS=-asrRix8
-export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:~/.npm-global/bin:$HOME/.bin"
 export AURDEST="/tmp/pacaur"
 
 source /usr/share/doc/pkgfile/command-not-found.zsh

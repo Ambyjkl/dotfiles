@@ -1,32 +1,29 @@
-#djui/alias-tips
+djui/alias-tips
 caarlos0/zsh-mkc
 caarlos0/zsh-open-github-pr
 
 # annotations are also allowed:
 
-robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
-robbyrussell/oh-my-zsh folder:plugins/archlinux
-robbyrussell/oh-my-zsh folder:plugins/archive
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+robbyrussell/oh-my-zsh path:plugins/archlinux
 
-zimfw/zimfw folder:modules/environment
-zimfw/zimfw folder:modules/archive
-zimfw/zimfw folder:modules/archive/functions kind:path
-zimfw/zimfw folder:modules/fasd
-zimfw/zimfw folder:modules/directory
-zimfw/zimfw folder:modules/git
-#zimfw/zimfw folder:modules/git/functions kind:path
-#zimfw/zimfw folder:modules/git-info
-zimfw/zimfw folder:modules/history
-zimfw/zimfw folder:modules/input
-zimfw/zimfw folder:modules/utility
-zimfw/zimfw folder:modules/meta
-zimfw/zimfw folder:modules/completion
-zimfw/zimfw folder:modules/prompt kind:path
+zimfw/zimfw path:modules/environment
+zimfw/zimfw path:modules/archive
+zimfw/zimfw path:modules/archive/functions kind:path
+zimfw/zimfw path:modules/fasd
+zimfw/zimfw path:modules/directory
+zimfw/zimfw path:modules/git
+#zimfw/zimfw path:modules/git/functions kind:path
+#zimfw/zimfw path:modules/git-info
+zimfw/zimfw path:modules/history
+zimfw/zimfw path:modules/input
+zimfw/zimfw path:modules/utility
+zimfw/zimfw path:modules/completion
+zimfw/zimfw path:modules/prompt kind:path
 
 zdharma/history-search-multi-word
 zdharma/fast-syntax-highlighting
 b4b4r07/emoji-cli
-keithhamilton/oh-my-dogesh
 peterhurford/git-it-on.zsh
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-completions
